@@ -35,4 +35,5 @@ for (const [key , value] of map) {    // [key , value] ---> destructure of array
 }
 
 //Note :- arrays are not itteratable like this
+// but can be iterated using for in loop
 
