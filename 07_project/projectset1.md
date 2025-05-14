@@ -7,13 +7,14 @@
 ## Project 1
 
 ```javascript
-const buttons = document.querySelector('.button');
+
+const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
 buttons.forEach(function(button) {
   console.log(button);
 
-  button.addEventListner('click', function(e){
+  buttons.addEventListener('click', function(e){
     console.log(e);
     console.log(e.target);
 
@@ -35,6 +36,5 @@ buttons.forEach(function(button) {
   });
 
 });
-
 
 ```
