@@ -1,0 +1,94 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(165, 105, 157);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Wrapper box */
+#wrapper {
+  background-color: rgba(243, 162, 255, 0.7);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Header */
+h1 {
+  background-color: rgb(102, 50, 88);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+/* Label */
+#guess {
+  display: block;
+  font-size: 22px;
+  margin: 20px 0 10px;
+}
+
+/* Input field */
+#guessField {
+  width: 80%;
+  padding: 15px;
+  font-size: 18px;
+  border: 3px solid rgb(102, 50, 88);
+  border-radius: 10px;
+  text-align: center;
+  color: rgb(102, 50, 88);
+  background-color: #fff;
+}
+
+/* Submit button */
+#subt {
+  background-color: rgb(102, 50, 88);
+  color: #fff;
+  width: 80%;
+  padding: 15px;
+  font-size: 18px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#subt:hover {
+  background-color: rgb(85, 40, 75);
+}
+
+/* Results */
+.resultParas {
+  margin-top: 20px;
+}
+
+.lastResult,
+.guesses {
+  display: inline-block;
+  background-color: rgb(247, 177, 228);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #000;
+  margin: 5px;
+}
