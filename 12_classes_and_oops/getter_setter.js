@@ -1,3 +1,5 @@
+//class based syntax
+
 class User {
     constructor (email,password) {
         this.email
