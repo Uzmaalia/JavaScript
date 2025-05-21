@@ -1,4 +1,5 @@
 //slightly old method
+//function based
 
 function User (email,password) {  
     this.email
