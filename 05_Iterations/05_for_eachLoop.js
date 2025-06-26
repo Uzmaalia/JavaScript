@@ -39,6 +39,7 @@ const mycode = [
     },
 ]
 
+// arry k andr object ka access/iteration
 mycode.forEach( (item)=> {
     console.log(item.language);
     
