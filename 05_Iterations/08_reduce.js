@@ -4,7 +4,7 @@ const mynum = [1,2,3]
 //     console.log(`acc: ${acc} and curval: ${curval}`);
 //     return acc + curval
     
-// }, 0) 
+// }, 0) //here 0 is initial value of accumulator(acc)
 
 // const total = mynum.reduce( (acc, curr) => acc+curr ,0)
 
