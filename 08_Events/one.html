@@ -20,44 +20,48 @@
 </body>
 <script>
     // document.getElementById('owl').onclick = function(){
-    //     alert("owl clicked")
+    //     alert("owl clicked") //ONCLICK --> provides with less features therefore we use addEventListner
     // }
 
-     // attachEvent()
-    // jQuery - on
+     // attachEvent() --> used ealier
+    // jQuery - on event listner
 
+    //EVENTS
     // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY  [INTERVIEW]
     // altkey, ctrlkey, shiftkey, keyCode
 
+
+    //EVENT PROPOGATION ---> EVENT BUBBLING(this is default and default val is false) , EVENT CAPTURING(true)
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
     // }, false)
-
+ 
+    //bubbling(false)--->lower to higher, capturing(true) ---> higher to lower 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+    //     e.stopPropagation() //event bubble ho k upr k ele py nhi jyega(same as preventDefault)
     // }, false)
     
-    // document.getElementById('google').addEventListener('click',function(e){
+    // document.getElementById('google').addEventListener('click',function(e){ 
     //     e.preventDefault();
     //     e.stopPropagation()
     //     console.log("google clicked");
-    // }, false)
+    // }, false)  //default is false
    
-    
+    //IMAGE VANISHING 
     document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
+        console.log(e.target.tagName); //Specific ele
+        if (e.target.tagName === 'IMG') { //target.tagName ---> to only remove list item not whole ul
             console.log(e.target.id);
             let removeIt = e.target.parentNode
             removeIt.remove()
+            //remobeIt.parentNode.removeChild(removeIt) //same as above remove funcn
         }
     
         
     })
     
-    //removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>
