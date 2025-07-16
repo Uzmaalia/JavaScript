@@ -1,4 +1,4 @@
-const promiseOne = new Promise(function(resolve,reject){
+const promiseOne = new Promise(function(resolve,reject){ //new keyword-->instance of obj
     //Do an Async task
     //DB calls, cryptography, network
     setTimeout(function(){
