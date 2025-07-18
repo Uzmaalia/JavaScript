@@ -3,7 +3,7 @@ const promiseOne = new Promise(function(resolve,reject){ //new keyword-->instanc
     //DB calls, cryptography, network
     setTimeout(function(){
         console.log('Async task is complete');
-        resolve()
+        resolve() //connecting .then and resolve  to consume promise
         
     },1000)
 })
@@ -22,7 +22,7 @@ new Promise(function(resolve,reject){
         resolve()
         
     },1000)
-}).then(function(){
+}).then(function(){ //bcz new promise not stored in any variable
     console.log('Async task 2 resolved');
     
 })
@@ -30,7 +30,7 @@ new Promise(function(resolve,reject){
 
 const promiseThree = new Promise(function(resolve,reject){
     setTimeout(function(){
-        resolve({username: 'cat', email: 'cat@example.com'}) 
+        resolve({username: 'cat', email: 'cat@example.com'}) //mostly object is paased in form of data
     },1000)
 })
 
@@ -50,13 +50,15 @@ const promiseFour = new Promise(function(resolve,reject){
         resolve({username: 'cat', password: '123'}) 
         }
         else{
-            reject('ERROR : Something went wrong')
+            reject('ERROR : Something went wrong') //reject()--> gives error
         }
     },1000)
 })
 
-promiseFour
-.then((user) => {
+
+
+promiseFour //.then for values , .catch for error //taking out data
+.then((user) => { //chaning
     console.log(user);
     return user.username
 })
@@ -66,7 +68,7 @@ promiseFour
 .catch(function(error){
     console.log(error);
 })
-.finally(() => console.log('The promise is either resolved or rejected')
+.finally(() => console.log('The promise is either resolved or rejected')//tells The promise is either resolved or rejected
 )
 
 
@@ -82,7 +84,9 @@ const promiseFive = new Promise(function(resolve,reject){
     },1000)
 })
 
-async function consumepromiseFive() {
+
+
+async function consumepromiseFive() {  //handing promise using async
    try {
      const response = await promiseFive
      console.log(response);
