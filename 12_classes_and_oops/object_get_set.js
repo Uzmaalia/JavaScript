@@ -1,7 +1,7 @@
 //object based
 
 const User = {
-    _email: 'h@hc.com',
+    _email: 'h@hc.com', //here _ is used to make variable private. New proposal is that we use # instead of _
     _password: 'abc',
 
     get email(){
