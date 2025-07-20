@@ -6,7 +6,7 @@ function SetUseename(username){
 }
 
 function createUser(username,email,password){
-    setUsername.call(this, username)
+    setUsername.call(this, username) //call--->current execution contest kisi aur function ko pass kr dey rha h
     this.email
     this.password 
 }
