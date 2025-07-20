@@ -7,7 +7,7 @@ class User {
     }
 
     get email(){
-        return this._email.toUpperCase()
+        return this._email.toUpperCase() //here _ is used to chnage variable name to avoid RACE CONDITION
 
     }
     set email(value){
