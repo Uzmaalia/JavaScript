@@ -14,7 +14,7 @@ let heroPower = {
     }
 }
 
-Object.prototype.hitesh = function(){
+Object.prototype.hitesh = function(){ //added custom function directly to Object therefore this method will be presnt if every lower class like array etc
     console.log(`hitesh is present in all objects`);
 }
 
@@ -46,14 +46,14 @@ const TeacherSupport = {
 const TASupport = {
     makeAssigmnent: 'JS assignment',
     fullTime: true,
-    __proto__:TeachingSupport
+    __proto__:TeachingSupport //got access(inheritance) of TeachingSupport
 }
 
 Teacher.__proto__= User
 
 
 //modern syntax
-Object.setPrototypeOf(TeachingSupport, Teacher)
+Object.setPrototypeOf(TeachingSupport, Teacher) //got access(inheritance) of TeachingSupport, Teacher
 
 let anotherUsername = 'ChaiAurCode       '
 
